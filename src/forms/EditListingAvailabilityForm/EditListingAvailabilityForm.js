@@ -8,6 +8,7 @@ import { propTypes } from '../../util/types';
 import { Form, Button } from '../../components';
 
 import ManageAvailabilityCalendar from './ManageAvailabilityCalendar';
+import BookingCalendar from '../../components/BookingCalendar/BookingCalendar';
 import css from './EditListingAvailabilityForm.css';
 
 export class EditListingAvailabilityFormComponent extends Component {
@@ -48,11 +49,13 @@ export class EditListingAvailabilityFormComponent extends Component {
             <Form className={classes} onSubmit={handleSubmit}>
               {errorMessage}
               <div className={css.calendarWrapper}>
-                <ManageAvailabilityCalendar
+                <BookingCalendar />
+
+                {/* <ManageAvailabilityCalendar
                   availability={availability}
                   availabilityPlan={availabilityPlan}
                   listingId={listingId}
-                />
+                /> */}
               </div>
 
               <Button

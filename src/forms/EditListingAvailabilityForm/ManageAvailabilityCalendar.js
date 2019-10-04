@@ -383,6 +383,20 @@ class ManageAvailabilityCalendar extends Component {
     const calendarGridWidth = daySize * TABLE_COLUMNS + TABLE_BORDER;
 
     const calendar = availability.calendar;
+
+    const availabilityPlanType = {
+      type: 'availability-plan/day',
+      entries: [
+        {dayOfWeek: 'mon', seats: 3, startTime: '09:00', endTime: '17:00'},
+        {dayOfWeek: 'tue', seats: 3, startTime: '09:00', endTime: '17:00'},
+        {dayOfWeek: 'wed', seats: 3, startTime: '09:00', endTime: '11:00'},
+        {dayOfWeek: 'wed', seats: 1, startTime: '12:30', endTime: '16:30'},
+        {dayOfWeek: 'thu', seats: 3, startTime: '09:00', endTime: '17:00'},
+        {dayOfWeek: 'fri', seats: 3, startTime: '09:00', endTime: '17:00'},
+        {dayOfWeek: 'sat', seats: 8, startTime: '10:00', endTime: '15:00'},
+      ],
+    };
+
     const currentMonthData = calendar[monthIdString(currentMonth)];
     const {
       fetchExceptionsInProgress,
